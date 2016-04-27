@@ -81,7 +81,7 @@ package com.ms.tomf.Objects.MapObjects.Enemies
 		private function setUpProps():void
 		{
 			
-			wormProp.damage = 80;
+			wormProp.damage = 0;
 		}
 		
 		private function testingSprite(xS:Number, yS:Number):void

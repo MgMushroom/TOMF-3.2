@@ -1,15 +1,17 @@
 package com.ms.tomf.Objects
 {
-	import com.ms.tomf.Objects.Player;
 	import com.ms.tomf.ABS.Projectiles.ABSprojectiles;
+	import com.ms.tomf.Objects.Player;
 	import com.ms.tomf.Objects.MapObjects.Background;
+	import com.ms.tomf.Objects.MapObjects.Collectibles.Collectibles;
 	import com.ms.tomf.Objects.MapObjects.Ground;
+	import com.ms.tomf.Objects.MapObjects.Allys.TestTree;
 	import com.ms.tomf.Objects.MapObjects.Enemies.Worm;
 	import com.ms.tomf.Objects.MapObjects.Movement.Movement;
 	import com.ms.tomf.Objects.MapObjects.Traps.Traps;
 	import com.ms.tomf.Screens.InGame.InGame;
 	import com.ms.tomf.Screens.InGame.Physics;
-	import com.ms.tomf.Objects.MapObjects.Allys.TestTree;
+	
 	
 	import flash.display.MovieClip;
 	import flash.events.Event;
@@ -50,6 +52,7 @@ package com.ms.tomf.Objects
 			mapContent.testTree = new TestTree;
 			mapContent.traps = new Traps;
 			mapContent.movement = new Movement;
+			mapContent.collectibles = new Collectibles;
 			//mapContent.worm = new Worm;
 		}
 	
@@ -60,6 +63,7 @@ package com.ms.tomf.Objects
 			this.addChild(mapContent.movement);
 			this.addChild(mapContent.traps);
 			this.addChild(mapContent.testTree);
+			this.addChild(mapContent.collectibles);
 			//this.addChild(mapContent.worm);
 
 		}
