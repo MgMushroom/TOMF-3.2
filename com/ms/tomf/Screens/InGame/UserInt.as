@@ -11,11 +11,14 @@ package com.ms.tomf.Screens.InGame
 	import flash.events.Event;
 	import flash.media.Sound;
 	import flash.net.URLRequest;
-	import flash.text.TextField;
+	import flash.text.*;
+	
+	
+	
 	
 	public class UserInt extends MovieClip
 	{
-		private var bars:Object = new Object;
+		public static var bars:Object = new Object;
 		private var textF:TextField = new TextField;
 		private var stopper:Object = new Object;
 		private var snd:Sound = new Sound(new URLRequest("sound.mp3")); 
@@ -24,6 +27,9 @@ package com.ms.tomf.Screens.InGame
 		public function UserInt()
 		{
 			gotoAndStop("spear");
+			bars.mutAmout = 0;
+			setFonts();
+			
 			stopper.e = true;
 			stopper.q = true;
 			
@@ -31,18 +37,25 @@ package com.ms.tomf.Screens.InGame
 			this.addEventListener(Event.ENTER_FRAME, showPlayerParams);
 		}
 		
-		public function addBars():void
+		private function setFonts():void
 		{
 			
-
+		}
+		
+		public function addBars():void
+		{
+			var myFormat:TextFormat = new TextFormat();
+			myFormat.size = 70;
 			
-			textF.background = true;
+			//textF.background = true;
+			textF.textColor = 0xFF0000;
 			textF.backgroundColor = 0xFF0000;
-			//this.addChild(textF);
+			textF.defaultTextFormat = myFormat;
+			textF.x = 800;
+			textF.y = 25;
+			this.addChild(textF);
 			
-
-				
-
+			
 			bars.health = new Sprite;
 			//bars.health.graphics.lineStyle(3,0x000000);
 			bars.health.graphics.beginFill(0xFF0000);
@@ -87,6 +100,8 @@ package com.ms.tomf.Screens.InGame
 			if(Controls.keyboard.q == false && stopper.q == false)
 			{prevFrame(); snd.play(); stopper.q = true;}
 			
+			
+			textF.text = String(bars.mutAmout);
 			bars.health.width = Player.attributes.health * 2;
 			bars.stamina.width = ABSprojectiles.weapons.projectile.power * 4;
 		}
