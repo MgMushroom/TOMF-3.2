@@ -20,10 +20,10 @@ package com.ms.tomf.Objects.MapObjects.Traps
 		private function movement(e:Event):void
 		{
 			
-			if(sawProp.count > 500)
+			if(sawProp.count > 350)
 			{sawProp.dir = "left"}
 			
-			if(sawProp.count < -500)
+			if(sawProp.count < -350)
 			{sawProp.dir = "right"}
 			
 			if(sawProp.dir == "right")

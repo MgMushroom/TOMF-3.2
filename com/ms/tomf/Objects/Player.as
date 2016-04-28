@@ -7,7 +7,7 @@ package com.ms.tomf.Objects
 	import com.ms.tomf.Screens.InGame.Physics;
 	import com.ms.tomf.Screens.Menus.MainMenu;
 	
-	import flash.display.MovieClip;
+	import flash.display.MovieClip; 
 	import flash.events.Event;
 	import flash.geom.Point;
 	import flash.net.*;
@@ -37,18 +37,18 @@ package com.ms.tomf.Objects
 			state.running = true;
 			frameControl.frame = 0;
 			
-			this.x = 600 - this.width *0.5;
-			this.y = 400 - this.height*0.5;
+			this.x = 600;
+			this.y = 400;
 			setAttributes();
 			setPoints();
 		}
 		
 		private function setPoints():void
 		{	
-			leftPoint= new Point(0, 52.6);
-			rightPoint= new Point(80, 52.6);
-			upPoint = new Point(40, 0);
-			downPoint = new Point(40, 105.2);
+			leftPoint= new Point(-72.975/2, 0);
+			rightPoint= new Point(72.975/2, 0);
+			upPoint = new Point(0, -98.975/2);
+			downPoint = new Point(0, 98.975/2);
 			
 			bumpPoints.up = false;
 			bumpPoints.down = false;
@@ -89,31 +89,31 @@ package com.ms.tomf.Objects
 			{
 				frameControl.state = "stand";
 				//gotoAndPlay("stand");
-				this.scaleX = 0.75;
-				this.scaleY = 0.75;
+				this.scaleX = 0.5;
+				this.scaleY = 0.5;
 			}
 			if(Controls.keyboard.a == false && Controls.keyboard.d == false && this.x > Controls.mouse.x)
 			{
 				frameControl.state = "stand";
 				
-				this.scaleX = -0.75;
-				this.scaleY = 0.75;
+				this.scaleX = -0.5;
+				this.scaleY = 0.5;
 			}
 			
 			if(Player.bumpPoints.down == false && Physics.movement.speedY < 0 && this.x < Controls.mouse.x)
 			{
 				frameControl.state = "jump";
 				
-				this.scaleX = 0.75;
-				this.scaleY = 0.75;
+				this.scaleX = 0.5;
+				this.scaleY = 0.5;
 			}
 			
 			if(Player.bumpPoints.down == false  && Physics.movement.speedY < 0 && this.x > Controls.mouse.x)
 			{
 				frameControl.state = "jump";
 				
-				this.scaleX = -0.75;
-				this.scaleY = 0.75;
+				this.scaleX = -0.5;
+				this.scaleY = 0.5;
 			}
 		
 			if(Controls.keyboard.a == true && this.x < Controls.mouse.x && state.running && Player.bumpPoints.down == true||
@@ -121,8 +121,8 @@ package com.ms.tomf.Objects
 			{
 				frameControl.state = "running";
 				
-				this.scaleX = 0.75;
-				this.scaleY = 0.75;
+				this.scaleX = 0.5;
+				this.scaleY = 0.5;
 			}
 			
 			if(Controls.keyboard.a == true && this.x > Controls.mouse.x && state.running  && Player.bumpPoints.down == true||
@@ -130,8 +130,8 @@ package com.ms.tomf.Objects
 			{
 				frameControl.state = "running";
 			
-				this.scaleX = -0.75;
-				this.scaleY = 0.75;
+				this.scaleX = -0.5;
+				this.scaleY = 0.5;
 			}
 		
 			if(this.currentLabel != frameControl.state)

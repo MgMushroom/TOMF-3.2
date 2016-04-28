@@ -32,12 +32,12 @@ package com.ms.tomf.Objects.MapObjects.Traps
 			{
 				if(i == 1)
 				{
-				traps.swingSaw = new SwingSaw(4873.2, 405.8);
+				traps.swingSaw = new SwingSaw(2432.65, 208.3);
 				this.addChild(traps.swingSaw);
 				}
 				if(i == 1)
 				{
-					traps.swingSaw = new SwingSaw(5580.4, 235.0);
+					traps.swingSaw = new SwingSaw(2796.5, 116.35);
 					this.addChild(traps.swingSaw);
 				}
 			}

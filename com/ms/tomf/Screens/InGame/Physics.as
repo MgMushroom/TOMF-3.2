@@ -27,12 +27,12 @@ package com.ms.tomf.Screens.InGame
 		private function gravityData():void
 		{
 			gravity.gravityConst = 1.5;
-			gravity.jumpConst = -50;
+			gravity.jumpConst = -40;
 		}
 	
 		private function movementData():void
 		{
-			movement.speedConst = 2;
+			movement.speedConst = 1.25;
 			movement.speedX = 0;
 			movement.speedY = 0;
 			movement.scrollX = 0;

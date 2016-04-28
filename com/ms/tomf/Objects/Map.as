@@ -25,6 +25,7 @@ package com.ms.tomf.Objects
 			
 			defineMapContent();
 			addMapContent();
+			this.y += 300;
 			
 			this.addEventListener(Event.ENTER_FRAME, mapMovement);
 		}
@@ -44,7 +45,7 @@ package com.ms.tomf.Objects
 		
 		private function defineMapContent():void
 		{
-			
+			 
 			mapContent.ground = new Ground;
 			mapContent.background = new Background;
 			mapContent.testTree = new TestTree;
@@ -55,11 +56,11 @@ package com.ms.tomf.Objects
 	
 		private function addMapContent():void
 		{
-			this.addChild(mapContent.background);
+			//this.addChild(mapContent.background);
 			this.addChild(mapContent.ground);
-			this.addChild(mapContent.movement);
-			this.addChild(mapContent.traps);
-			this.addChild(mapContent.testTree);
+			//this.addChild(mapContent.movement);
+			//this.addChild(mapContent.traps);
+			//this.addChild(mapContent.testTree);
 			//this.addChild(mapContent.worm);
 
 		}

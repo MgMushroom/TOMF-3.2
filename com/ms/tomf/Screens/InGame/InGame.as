@@ -62,7 +62,7 @@ package com.ms.tomf.Screens.InGame
 			this.addChild(inGameContent.absMagic);
 			this.addChild(inGameContent.ui);
 			this.addChild(inGameContent.inGameMenu);
-			
+		
 		}
 	}
 }
