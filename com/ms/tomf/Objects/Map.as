@@ -41,8 +41,11 @@ package com.ms.tomf.Objects
 			InGame.inGameContent.map.x = Physics.movement.scrollX;
 			InGame.inGameContent.map.y = Physics.movement.scrollY;
 		
-			if(y < -1000)
-			{Player.attributes.health -= 100;}
+			if(y < -10000)
+			{
+				trace(y);
+				//	Player.attributes.health -= 100;
+			}
 		}
 		
 		private function defineMapContent():void
@@ -59,18 +62,13 @@ package com.ms.tomf.Objects
 	
 		private function addMapContent():void
 		{
-			//this.addChild(mapContent.background);
+			this.addChild(mapContent.background);
 			this.addChild(mapContent.ground);
-<<<<<<< HEAD
-			//this.addChild(mapContent.movement);
-			//this.addChild(mapContent.traps);
 			//this.addChild(mapContent.testTree);
-=======
 			this.addChild(mapContent.movement);
 			this.addChild(mapContent.traps);
-			this.addChild(mapContent.testTree);
 			this.addChild(mapContent.collectibles);
->>>>>>> aa586ca2038ef572788ee57cd3edd81523150d81
+
 			//this.addChild(mapContent.worm);
 
 		}

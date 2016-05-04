@@ -1,11 +1,16 @@
 package com.ms.tomf.Objects.MapObjects.Traps
-{
+{ 
 	import flash.display.MovieClip;
 	import flash.events.*;
+	import flash.geom.Point;
+	import flash.display.Sprite
+	
 	
 	public class Saw extends MovieClip
 	{
 		private var sawProp:Object = new Object;
+		
+		private var testSprite:Sprite = new Sprite;
 		
 		public function Saw()
 		{
