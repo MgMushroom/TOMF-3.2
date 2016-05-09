@@ -32,7 +32,7 @@ package com.ms.tomf.Screens.InGame
 	
 		private function movementData():void
 		{
-			movement.speedConst = 1.25;
+			movement.speedConst = 0.8;
 			movement.speedX = 0;
 			movement.speedY = 0;
 			movement.scrollX = 0;

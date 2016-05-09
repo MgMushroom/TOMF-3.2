@@ -9,7 +9,7 @@ package com.ms.tomf.Objects.MapObjects.Traps
 		
 		public function SwingSaw(xSwing:int, ySwing:int)
 		{
-			swingSawProps.rotateSpeed = 10;
+			swingSawProps.rotateSpeed = 5;
 			
 			this.x = xSwing;
 			this.y = ySwing;

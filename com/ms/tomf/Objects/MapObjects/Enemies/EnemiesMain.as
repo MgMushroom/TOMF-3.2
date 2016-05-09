@@ -20,12 +20,13 @@ package com.ms.tomf.Objects.MapObjects.Enemies
 			var enemies:Object = new Object;
 			var enemyArchive:Object = new Object;
 			
-			enemyArchive.worm1 = new Array(3000,200,true,16);
-			enemyArchive.worm2 = new Array(1200,200,true,20);
-			enemyArchive.worm3 = new Array(4225,200,false,18);
-			enemyArchive.worm4 = new Array(6000,200,false,22);
-			enemyArchive.worm5 = new Array(11000,200,false,25);
-			enemyArchive.worm6 = new Array(12250,200,false,23);
+			enemyArchive.worm1 = new Array(2524.65,379.45,true,11);
+			enemyArchive.worm2 = new Array(2524.65,-660.35,true,12);
+			enemyArchive.worm3 = new Array(5461.35,-387.10,false,13);
+			enemyArchive.worm4 = new Array(9334.25,306.50,false,14);
+			enemyArchive.worm5 = new Array(10158.20,306.50,false,15);
+			enemyArchive.worm6 = new Array(10978.65,306.50,false,12);
+			enemyArchive.worm7 = new Array(14931.65,1681.65,false,13);
 			
 			for(var i:int = 0;i<10;i++)
 			{
@@ -62,6 +63,11 @@ package com.ms.tomf.Objects.MapObjects.Enemies
 				if(i==6)
 				{
 					enemies.worm = new Worm(enemyArchive.worm6);
+					this.addChild(enemies.worm);
+				}
+				if(i==7)
+				{
+					enemies.worm = new Worm(enemyArchive.worm7);
 					this.addChild(enemies.worm);
 				}
 			}

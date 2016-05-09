@@ -16,8 +16,8 @@ package com.ms.tomf.ABS.melee
 			knife.dir = playerDir;
 			
 			trace("KNIFE");
-			this.x = InGame.inGameContent.player.x + 45;
-			this.y = InGame.inGameContent.player.y + 75;
+			this.x = InGame.inGameContent.player.x + 10;
+			this.y = InGame.inGameContent.player.y + 20;
 			
 			
 			this.addEventListener(Event.ENTER_FRAME, checkRotation);

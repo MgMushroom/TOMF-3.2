@@ -51,10 +51,10 @@ package com.ms.tomf.Objects.MapObjects.Enemies
 	
 		private function setUpPoints():void
 		{
-			leftPointWorm = new Point(-100.30, 0);
-			rightPointWorm = new Point(100.30, 0)
-			upPointWorm = new Point(0, -67)
-			downPointWorm = new Point(0, 50)
+			leftPointWorm = new Point(-50, 0);
+			rightPointWorm = new Point(50, 0)
+			upPointWorm = new Point(0, -33.5)
+			downPointWorm = new Point(0, 33.5)
 		
 			/*for(var i:int = 0; i < 4; i++)
 			{
@@ -132,7 +132,7 @@ package com.ms.tomf.Objects.MapObjects.Enemies
 			else{wormProp.inBounds = false;}
 		
 			if(wormProp.inBounds == false)
-			{this.y -= 400;}
+			{this.y -= 1000;}
 		}
 	
 		private function playerDec(e:Event):void
